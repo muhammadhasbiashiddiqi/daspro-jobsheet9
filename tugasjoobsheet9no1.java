@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/**
+ * tugasjoobsheet9n02
+ */
 public class tugasjoobsheet9no1 {
 
     public static void main(String[] args) {
