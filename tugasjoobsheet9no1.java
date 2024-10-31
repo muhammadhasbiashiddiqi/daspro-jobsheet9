@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * tugasjoobsheet9n02
+ * tugasjoobsheet9n01
  */
 public class tugasjoobsheet9no1 {
 

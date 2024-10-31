@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * ArrayNilai17
+ * tugasjoobshet9n03
  */
 public class tugasjoobshet9n03 {
     public static void main(String[] args) {
