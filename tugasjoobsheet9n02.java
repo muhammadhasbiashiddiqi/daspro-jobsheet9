@@ -6,28 +6,21 @@ import java.util.Scanner;
 public class tugasjoobsheet9n02 {
 
     public static void main(String[] args) {
+        String[] menu = {"Nasi Goreng", "Mie Goreng", "Roti Bakar", "Kentang Goreng", "Teh Tarik", "Cappuccino", "Chocolate Ice"};
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Masukkan jumlah pesanan: ");
-        int jumlahPesanan = scanner.nextInt();
-        scanner.nextLine();
-        String[] namaPesanan = new String[jumlahPesanan];
-        double[] hargaPesanan = new double[jumlahPesanan];
-        for (int i = 0; i < jumlahPesanan; i++) {
-            System.out.print("Masukkan nama pesanan ke-" + (i + 1) + ": ");
-            namaPesanan[i] = scanner.nextLine();
-
-            System.out.print("Masukkan harga pesanan ke-" + (i + 1) + ": ");
-            hargaPesanan[i] = scanner.nextDouble();
-            scanner.nextLine();
+        System.out.print("Masukkan nama makanan yang ingin dicari: ");
+        String makananDicari = scanner.nextLine();
+        boolean ditemukan = false;
+        for (String item : menu) {
+            if (item.equalsIgnoreCase(makananDicari)) {
+                ditemukan = true;
+                break;
+            }
         }
-        double totalBiaya = 0;
-        for (double harga : hargaPesanan) {
-            totalBiaya += harga;
+        if (ditemukan) {
+            System.out.println("Makanan '" + makananDicari + "' tersedia di menu.");
+        } else {
+            System.out.println("Makanan '" + makananDicari + "' tidak ada di menu.");
         }
-        System.out.println("\nDaftar Pesanan:");
-        for (int i = 0; i < jumlahPesanan; i++) {
-            System.out.println("- " + namaPesanan[i] + " : Rp " + hargaPesanan[i]);
-        }
-        System.out.println("Total Biaya: Rp " + totalBiaya);
     }
 }
