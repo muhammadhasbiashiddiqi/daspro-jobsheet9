@@ -7,18 +7,30 @@ public class ArrayRataNilai17 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[] nilaimhs = new int[10];
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jumlahMahasiswa = sc.nextInt();
+        int[] nilaimhs = new int[jumlahMahasiswa];
         double total = 0;
-        double rata2;
         for (int i = 0; i < nilaimhs.length; i++) {
-            System.out.print("mskkan nilai mahasiswa ke- " + (i +1) + " : ");
+            System.out.print("Masukkan nilai mahasiswa ke-" + (i + 1) + " : ");
             nilaimhs[i] = sc.nextInt();
-        }
-        for (int i = 0; i < nilaimhs.length; i++) {
             total += nilaimhs[i];
-            
         }
-        rata2 = total/nilaimhs.length;
-        System.out.println("rata rta nilai = "+rata2);
+        int jumlahNilaiLulus = 0,jumlahntidaklulus = 0;
+        int nilaiLulus = 0 , nilaitidaklulus = 0;
+        for (int nilai : nilaimhs) {
+            if (nilai >= 70) {
+                jumlahNilaiLulus += nilai;
+                nilaiLulus++;
+            }
+            else {
+                jumlahntidaklulus += nilai;
+                nilaitidaklulus++;
+            }
+        }
+        double rataRataLulus = (nilaiLulus > 0) ? (double) jumlahNilaiLulus / nilaiLulus : 0;
+        double rataRataTidakLulus = (nilaitidaklulus> 0) ? (double) jumlahntidaklulus/ nilaitidaklulus : 0;
+        System.out.println("Rata-rata nilai lulus = " + rataRataLulus);
+        System.out.println("Rata-rata nilai tidak lulus = " + rataRataTidakLulus);
     }
 }
