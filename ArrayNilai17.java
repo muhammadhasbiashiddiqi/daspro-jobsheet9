@@ -12,8 +12,13 @@ public class ArrayNilai17 {
             System.out.print("masukkan nilai akhir ke- "+i+":");
             nilaiakhir[i] = sc.nextInt();
         }
-            for (int i = 0; i < 10; i++) {
-                System.out.println("nilai akhir ke- " +i+" adalah "+nilaiakhir[i]);
+            for (int i = 0; i < nilaiakhir.length; i++) {
+                if (nilaiakhir[i]>70) {
+                    System.out.println("mahasiswa ke-"+ i +" lulus");
+                }
+                else{
+                    System.out.println("mahasiswa ke-"+ i +" tidak lulus");
+                }
             
         }
     }
